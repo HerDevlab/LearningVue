@@ -1,0 +1,5 @@
+Vetur et Prettier sur vs code
+Node.js  ---> chocolatey et python
+
+commande pour new répertoire
+npm init @vitejs/app my-vue-app --template vue-ts

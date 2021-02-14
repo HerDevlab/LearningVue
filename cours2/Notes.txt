@@ -1,0 +1,12 @@
+Notes
+- cours en présentiel
+- correction exo 2
+- si tu crées un fichier.vue. Tu peux l'appeler en balise, l'import et le mettre en components
+dans un autre fichier.
+<fichier :...></fichier>
+components:{
+	fichier,
+}
+- un fichier vue = un composant
+- communication enfant/parent (transmission d'events et recupération) child to parent
+- $emit

@@ -1,2 +1,7 @@
-new repertory
+new repertory/ new app
 npm init @vitejs/app my-vue-app --template vue-ts
+
+
+pour créer serv local où heberger app
+npm install
+npm run dev

@@ -1,27 +1,39 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
-</template>
+</template> 
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+  import { defineComponent } from 'vue'
+  import HelloWorld from './components/HelloWorld.vue'
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-})
+  export default defineComponent({
+    //on definit un composant, il a un nom
+    name: 'App',
+    components: {
+      HelloWorld
+    },
+
+    //il a des données
+    data: {
+      text: '',
+      table: [
+        {/*je suis un objet*/ id:0, value:'Miaou'},
+        {/*je suis un objet*/ id:0, value:'Woof'},
+        {/*je suis un objet*/ id:0, value:'Yap Yap'}
+      ]
+    }
+
+  })
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>

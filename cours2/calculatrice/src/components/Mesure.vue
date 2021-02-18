@@ -1,9 +1,10 @@
 <template>
     <div>
-        {{ convertedKM }} km
-        {{ convertedM }} m
-        {{ convertedCM }} cm
-        {{ convertedMM }} mm
+        <input type="text" v-model.number="km"/>
+
+        <span> m : {{ m }}</span>
+        <span> cm : {{ cm }}</span>
+        <span> mm : {{ mm }}</span>
     </div>
 </template>
 
@@ -16,25 +17,23 @@ export default {
     data() {
         return{
           km: 0,
-          m: 0,
-          cm: 0,
-          mm: 0
         }
     },
     computed:{
-        conversion(){
-            if(this.km){
+        m(): number{
+            return this.km * 1000;
+        },
 
-            }else if(this.m){
+        cm(): number{
+            return this.m * 100;
+        },
 
-            }else if(this.cm){
-
-            }else if(this.mm){
-                //return [km,m,cm]
-            }
-        }
+        mm(): number{
+            return this.cm * 10;
+        } // avec des computed, maintenant go faire avec des watcher
+        
     },
-    emits:['convertedKM', 'convertedM', 'convertedCM', 'convertedMM']
+    //aec les watcher, tu crée 4 datas km,m,cmet mm puis dans le wa tu fais this.m = value*1000 / this.cm = this.m * 100
 }
 
 
